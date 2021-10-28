@@ -1,0 +1,264 @@
+// ПЕРВЫЙ ЭКРАН
+
+/*Основной блок*/
+
+#first-screen {
+	background-image: url('../img/pictures/backgrounds/header-bg-1x.jpg');
+	@include bg-x2 ('../img/pictures/backgrounds/header-bg-2x.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 68rem;
+
+	@include bp-1400 {
+		height: 100%;
+	}
+
+	@include bp-992 {
+		background-position-x: -80rem;
+	}
+}
+
+.banner__row {
+	justify-content: space-between;
+	flex-wrap: nowrap;
+
+	@include bp-992 {
+		flex-direction: column;
+	}
+}
+
+
+/*-----------*/
+
+
+
+
+/*Информация слева*/
+
+.banner__info-block {
+	display: flex;
+	flex-direction: column;
+	flex: 1 2 70%;
+	max-width: 79rem;
+	margin-right: 2rem;
+
+	@include bp-992 {
+		flex-basis: 100%;
+		max-width: 100%;
+		margin-right: 0;
+	}
+}
+
+.banner__main-title {
+	margin-bottom: 4rem;
+
+	h1 {
+		color: $white;
+
+		span {
+			color: $second-color;
+		}
+
+		@include bp-640 {
+			text-align: center;
+		}
+	}
+}
+
+.banner__quote-shield {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 4rem;
+}
+
+.banner__quote {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	margin-right: 2rem;
+	flex: 1 1 52rem;
+	max-width: 52rem;
+
+	.icon-quote {
+		width: 2.3rem;
+		height: 2rem;
+		transform: rotate(270deg);
+		margin-right: 1rem;
+		&:before {
+			font-size: 1.6rem;
+			color: $white;
+			opacity: 0.3;
+		}
+		@include bp-640 {
+			display: none;
+		}
+	}
+
+	p {
+		@include adaptiv-font(20,14);
+		color: $white;
+		span {
+			font-weight: 700;
+			color: $white;
+		}
+
+		@include bp-640 {
+			text-align: center;
+		}
+
+	}
+}
+
+.banner__building-types {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 4rem;
+
+	@include bp-640 {
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+}
+
+.building-type {
+	position: relative;
+	flex: 1 2 15rem;
+	max-width: 15rem;
+	overflow: hidden;
+	border-radius: 1.5rem;
+	background-color: $main-color;
+	margin: 0.5rem;
+	
+	p {
+		position: absolute;
+		padding-top: 1.5rem;
+		padding-left: 1.5rem;
+		font-size: 1.4rem;
+		font-weight: 700;
+		color: $white;
+	}
+
+	@include bp-640 {
+		flex-basis: 10rem;
+		max-width: 10rem;
+	}
+
+	.building-pic {
+		max-width: 15rem;
+		height: 15rem;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position-y: 0;
+	}
+
+	.home-pic {
+		background-image: url('../img/pictures/banner-cards/home-1x.png');
+		@include bg-x2 ('../img/pictures/banner-cards/home-2x.png');
+	}
+
+	.summer-pic {
+		background-image: url('../img/pictures/banner-cards/summer-1x.png');
+		@include bg-x2 ('../img/pictures/banner-cards/summer-2x.png');
+	}
+
+	.sauna-pic {
+		background-image: url('../img/pictures/banner-cards/sauna-1x.png');
+		@include bg-x2 ('../img/pictures/banner-cards/sauna-2x.png');
+	}
+
+	.pergola-pic {
+		background-image: url('../img/pictures/banner-cards/pergola-1x.png');
+		@include bg-x2 ('../img/pictures/banner-cards/pergola-2x.png');
+	}
+
+	.kids-pic {
+		background-image: url('../img/pictures/banner-cards/kids-1x.png');
+		@include bg-x2 ('../img/pictures/banner-cards/kids-2x.png');
+	}
+
+}
+
+/*-----------*/
+
+
+
+
+/*Форма*/
+
+.banner__form {
+	flex: 1 0 30%;
+	max-width: 36rem;
+
+	@include bp-992 {
+		flex-basis: 100%;
+		max-width: 100%;
+	}
+}
+
+.banner__form-wrapper {
+	padding: 15px;
+	border-radius: 1rem;
+	background-color: rgba(255, 255, 255, 0.4); 
+	
+	.tag-sale {
+		position: relative;
+		width: 100%;
+		height: 2px;
+		img {
+			position: absolute;
+			margin: 0 auto;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
+
+.banner__form-container {
+	background-color: $white;
+	padding: 4rem 3rem;
+	border-radius: 1rem;
+}
+
+.banner__form-title {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2rem;
+
+	@include bp-992 {
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	@include bp-640 {
+		flex-direction: column;
+	}
+
+	p, span {
+		@include title-font;
+		font-weight: 800;
+		font-size: 1.8rem;
+		text-align: center;
+	}
+
+	p {
+		@include bp-992 {
+			margin-right: 0.5rem;
+		}
+		@include bp-640 {
+			margin-right: 0;
+		}
+	}
+
+	span {
+		color: $orange;
+	}
+
+}
+
+/*-----------*/
+
+
+// SECTION END ==========
+
+

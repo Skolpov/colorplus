@@ -1,0 +1,75 @@
+.address, .clock, .mail, .phone {
+	display: flex;
+	align-items: center;
+
+	.contacts-ic {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-shrink: 0;
+		margin-right: 1rem;
+		width: 2rem;
+		height: 2rem;
+		.icon-map,
+		.icon-clock,
+		.icon-mail,
+		.icon-phone {
+			font-size: 1.8rem;
+		}
+	}
+
+	p {
+		@include adaptiv-font(14,14);
+	}
+}
+
+
+.phone {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	max-width: 24rem;
+	flex-shrink: 0;
+	
+	.contacts-ic {
+		margin-right: 1rem;
+		.icon-phone {
+			&:before {
+				position: relative;
+				top: 1px;
+			}
+		}
+	}
+
+	.phone__block {
+		position: relative;
+		cursor: pointer;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+		.phone-number {
+			position: relative;
+			font-size: 1.8rem;
+			font-weight: 700;
+			color: $white;
+			display: block;
+
+			&:hover {
+				color: $link;
+				border: none !important;
+			}
+			
+		}
+
+		.header__call-form-btn {
+			display: block;
+			color: $second-color;
+		}
+	
+
+
+	}
+
+}
+

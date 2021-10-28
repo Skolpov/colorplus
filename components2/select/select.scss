@@ -1,0 +1,66 @@
+// SELECT
+
+
+.select-group {
+	position: relative;
+	width: 25rem;
+	.button {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		padding: 1.5rem;
+		width: 100%;
+		height: 5rem;
+		background: white;
+		border: 1px solid $grey-light4;
+		border-radius: 0.4rem;
+		&:after {
+			display: none !important;
+		}
+		&:hover {
+			&:after {
+				display: none !important;
+			}
+		}
+	
+		.arr {
+			position: absolute;
+			top: 1.7rem;
+			right: 1.5rem;
+			border: 1px solid $main-color;
+			border-width: 0 0.2rem 0.2rem 0;
+			padding: 0.4rem;
+			transform: rotate(45deg);
+		}
+	
+	}
+
+	.dropdown {
+		position: absolute;
+		display: block;
+		top: 6rem;
+		z-index: 5;
+		border: 1px solid $grey-light4;
+		width: 100%;
+		border-radius: 0.4rem;
+		.option {
+			display: none;
+		}
+	
+		.select-item {
+			display: block;
+			background-color: white;
+			padding: 1.5rem 0.5rem 1.5rem 1.5rem;
+			transition: all 0.3 ease-in-out;
+			&:hover {
+				cursor: pointer;
+				background-color: lighten($main-color, 55%);
+				color: $main-color;
+			}
+		}
+	}
+
+}
+
+
+// ==========

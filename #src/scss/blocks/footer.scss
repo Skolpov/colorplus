@@ -1,0 +1,79 @@
+// ПОДВАЛ
+
+/*Основной блок*/
+
+footer {
+	border-top: 1px solid $grey-light3;
+	background-color: $black;
+}
+
+/*-----------*/
+
+
+
+
+/*Блок*/
+
+.footer__container {
+	
+	.footer-row {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+
+		.footer__copyright {
+			display: flex;
+			align-items: center;
+			flex: 1 1 40rem;
+			max-width: 40rem;
+
+			@include bp-768 {
+				margin-bottom: 1rem;
+				text-align: center;
+				flex-basis: 100%;
+				max-width: 100%;
+			}
+
+			p {
+				color: $grey-dark1;
+				font-size: 1.3rem;
+			}
+
+
+
+		}
+
+		.footer__links {
+			display: grid;
+			align-items: center;
+			justify-content: flex-end;
+			flex: 1 1 30rem;
+			max-width: 30rem;
+
+			@include bp-768 {
+				justify-content: center;
+				text-align: center;
+				flex-basis: 100%;
+				max-width: 100%;
+			}
+
+			.link {
+				a {
+					font-size: 1.3rem;
+					color: $white;
+				}
+			}
+
+
+		}
+
+	}
+}
+
+
+/*-----------*/
+
+
+// КОНЕЦ ПОДВАЛА ==========

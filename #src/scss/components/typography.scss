@@ -1,0 +1,63 @@
+// ТИПОГРАФИКА
+
+/*Общее*/
+
+h1 {
+	@include adaptiv-font(40,26);
+}
+
+h2 {
+	@include adaptiv-font(32,24);
+}
+
+h3 {
+	@include adaptiv-font(28,22);
+}
+
+h4 {
+	@include adaptiv-font(24,20);
+}
+
+h5 {
+	@include adaptiv-font(20,18);
+}
+
+h6 {
+	@include adaptiv-font(18,16);
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	@include title-font;
+	font-weight: 800;
+	color: $title;
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+p, span {
+	color: $text;
+}
+
+p, a, span {
+	@include text-font;
+}
+
+a {
+	text-decoration: none;
+	background-color: transparent;
+	transition-duration: 0.3s;
+	color: $link;
+}
+
+a:hover {
+	color: lighten($link, 20%);
+}
+
+/*-----------*/
+
+
+// ==========

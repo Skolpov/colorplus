@@ -1,0 +1,277 @@
+// ШАПКА
+
+
+/*Основа*/
+
+.header {
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 40;
+	border-bottom: 1px solid #848272;
+}
+
+.header__container {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.header-row {
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	
+	@include bp-480 {
+		flex-direction: column;
+	}
+}
+
+.header--fixed {
+	position: fixed;
+	background-color: $third-color;
+	border-bottom: 0;
+
+	@include bp-480 {
+		.logo-company {
+			display: none;
+		}
+	}
+
+}
+
+/*-----------*/
+
+
+
+
+/*Логотип*/
+
+.logo-company {
+	display: flex;
+	align-items: center;
+	margin-right: 3rem;
+	flex: 1 1 18rem;
+	max-width: 18rem;
+
+	@include bp-480 {
+		justify-content: center;
+		flex-basis: auto;
+		margin-top: .5rem;
+		margin-bottom: 1.5rem;
+		margin-right: 0;
+		max-width: 100%;
+	}
+
+}
+
+/*-----------*/
+
+
+
+
+/*Меню*/
+
+.header__menu {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	flex: 2 2 68rem;
+	max-width: 68rem;
+
+	@include bp-1200 {
+		display: none;
+	}
+
+}
+
+.header-menu__item {
+	display: block;
+	padding: 2rem 1.5rem 3rem;
+	margin-bottom: -1.1rem;
+	font-size: 1.6rem;
+	white-space: nowrap;
+	text-transform: uppercase;
+	color: $white;
+	border-bottom: 0.2rem solid transparent;
+
+	&:hover {
+		border-bottom: 0.2rem solid $btn;
+		color: $btn;
+	}
+}
+
+/*-----------*/
+
+
+
+
+/*Контакты*/
+
+.contacts {
+	display: flex; 
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: stretch;
+	flex: 2 1 47rem;
+	max-width: 47rem;
+
+	@include bp-480 {
+		justify-content: space-between;
+		flex-basis: auto;
+	}
+}
+
+.address, .clock, .mail, .phone,.whatsapp {
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
+}
+
+.whatsapp {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	@include bp-640 {
+		display: none;
+	}
+
+	.whatsapp-btn {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 0.6rem 1.5rem;
+		border-radius: 0.5rem;
+		transition-property: background-color;
+		transition-duration: 0.3s;
+		margin-bottom: 0.5rem;
+		font-size: 1.3rem;
+		border: 1px dotted $white;
+		color: $white;
+
+		&:hover {
+			background-color: $white;
+			cursor: pointer;
+			color: #76715E;
+		}
+
+		.whatsapp-ic {
+			background: url('../img/icons/social/whatsapp-2.svg');
+			width: 1.5rem;
+			height: 1.5rem;
+			margin-right: 1rem;
+		}
+	}
+
+	p {
+		color: $white;
+		font-size: 1.2rem;
+	}
+
+}
+
+.phone-header {
+
+	.contacts-ic {
+		.icon-circle-phone:before {
+			color: $second-color;
+		}
+	}
+
+	.phone__block {
+		.phone-number {
+			&:hover {
+				color: $second-color;
+			}
+		}
+	}
+
+}
+
+/*-----------*/
+
+
+
+
+/*Кнопка меню*/
+
+.menu-btn__block {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 1.5rem;
+	height: auto;
+	box-sizing: border-box;
+
+	@include bp-768 {
+		padding: 1rem;
+	}
+	@include bp-320 {
+		padding: 0.5rem;
+	}
+}
+
+.menu-btn {
+	position: relative;
+	top: 1px;
+	width: 3rem; 
+	height: 2.5rem;
+	cursor: pointer;
+	position: relative;
+	transform: rotate(0deg);
+	transition: .5s ease-in-out;
+
+	 span {
+		display: block;
+		position: absolute;
+		height: 0.3rem;
+		width: 100%;
+		border-radius: 0.8rem;
+		background: $white;
+		opacity: 1;
+		left: 0;
+		transform: rotate(0deg);
+		transition: .25s ease-in-out;
+	  }
+	  
+	  span:nth-child(1) {
+		top: 0px;
+		transform-origin: left center;
+	  }
+	  
+	  span:nth-child(2) {
+		top: 1rem;
+		transform-origin: left center;
+	  }
+	  
+	  span:nth-child(3) {
+		top: 2rem;
+		transform-origin: left center;
+	  }
+	  
+	  &.open-burger span:nth-child(1) {
+		transform: rotate(45deg);
+		top: -0.1rem;
+		left: 0.4rem;
+	  }
+	  
+	  &.open-burger span:nth-child(2) {
+		width: 0%;
+		opacity: 0;
+	  }
+	  
+	  &.open-burger span:nth-child(3) {
+		transform: rotate(-45deg);
+		top: 2rem;
+		left: 0.3rem;
+	  }
+}
+
+/*-----------*/
+
+
+// КОНЕЦ ШАПКИ ==========
+
+

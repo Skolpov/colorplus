@@ -1,0 +1,107 @@
+// Основа
+
+html {
+	font-size: 10px;
+}
+
+body {
+	margin: 0;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	font-family: 'Open Sans', Roboto, sans-serif;
+	font-size: 1.6rem;
+	-webkit-text-size-adjust: none;
+	box-sizing: border-box;
+}
+
+
+
+// Блоки
+
+.container {
+	position: relative;
+	max-width: 1320px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	min-height: 100%;
+	width: 100%;
+}
+
+@media (max-width:1360px) {
+	.container {
+		max-width: 1170px;
+	}
+}
+
+@media (max-width:1170px) {
+	.container {
+		max-width: 970px;
+	}
+}
+
+@media (max-width:992px) {
+	.container {
+		max-width: 750px;
+	}
+}
+
+@media (max-width:767px) {
+	.container {
+		// max-width: 540px;
+		max-width: none;
+	}
+}
+
+@media (max-width:540px) {
+	.container {
+		max-width: none;
+	}
+}
+
+.paddTB__main-block {
+	padding-top: 10rem;
+	padding-bottom: 10rem;
+	@include bp-768 {
+		padding-top: 8rem;
+		padding-bottom: 8rem;
+	}
+	@include bp-480 {
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+	}
+}
+
+
+.paddTB {
+	padding-top: 12rem;
+	padding-bottom: 12rem;
+	@include bp-768 {
+		padding-top: 8rem;
+		padding-bottom: 8rem;
+	}
+	@include bp-480 {
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+	}
+}
+
+.hidden {
+	display: none !important;
+}
+
+.shown {
+	display: flex !important;
+}
+
+.overflow-hidden {
+	overflow: hidden !important;
+}
+
+
+// ==========

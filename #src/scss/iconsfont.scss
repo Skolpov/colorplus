@@ -1,0 +1,103 @@
+@font-face {
+	font-family: 'icomoon';
+	src:  url('../fonts/icomoon.woff?2ra5jt2') format('woff2'),
+	 	 url('../fonts/icomoon.woff?2ra5jt') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+  }
+  
+  [class^="icon-"]::before, [class*=" icon-"]::before {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+  
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  }
+  
+
+
+.icon-adv1:before {
+	content: "\e90d";
+}
+.icon-adv2:before {
+	content: "\e90e";
+}
+.icon-adv3:before {
+	content: "\e90f";
+}
+.icon-adv4:before {
+	content: "\e910";
+}
+
+
+.icon-floors:before {
+	content: "\e919";
+}
+.icon-rooms:before {
+	content: "\e91a";
+}
+.icon-size:before {
+	content: "\e91b";
+}
+
+
+.icon-circle-phone:before {
+	content: "\e921";
+}
+.icon-phone:before {
+	content: "\e901";
+}
+.icon-map:before {
+	content: "\e902";
+}
+.icon-mail:before {
+	content: "\e900";
+}
+.icon-clock:before {
+	content: "\e903";
+}
+.icon-user:before {
+	content: "\e904";
+}
+
+
+.icon-cross:before {
+	content: "\e909";
+}
+.icon-search:before {
+	content: "\e90b";
+}
+.icon-circle-check:before {
+	content: "\e908";
+}
+.icon-square-check:before {
+	content: "\e920";
+}
+.icon-arrow-tail-bold:before {
+	content: "\e90c";
+}
+.icon-arrow-bold:before {
+	content: "\e907";
+}
+.icon-arrow-tail-thin:before {
+	content: "\e906";
+}
+.icon-arrow-thin:before {
+	content: "\e905";
+}
+.icon-bold-check:before {
+	content: "\e90a";
+}
+.icon-quote:before {
+	content: "\e922";
+}
+  
+  
