@@ -31,40 +31,40 @@ function smoothScroll(target, duration) {
 // Это кнопки меню, которые скролят до нужного блока
 
 const mainAnchor = document.querySelector('.main-anchor');
-const block2Anchor = document.querySelector('.block2-anchor');
-const block3Anchor = document.querySelector('.block3-anchor');
-const block4Anchor = document.querySelector('.block4-anchor');
-const block5Anchor = document.querySelector('.block5-anchor');
-const block6Anchor = document.querySelector('.block6-anchor');
+const aboutusAnchor = document.querySelector('.aboutus-anchor');
+const projectsAnchor = document.querySelector('.projects-anchor');
+const reviewsAnchor = document.querySelector('.reviews-anchor');
+const stepsAnchor = document.querySelector('.steps-anchor');
+const contactsAnchor = document.querySelector('.contacts-anchor');
 
 mainAnchor.addEventListener('click', function() {
 	// Тут вставляешь название блока куда скролить
 	smoothScroll('.main-target', 1000);
 });
 
-block2Anchor.addEventListener('click', function() {
+aboutusAnchor.addEventListener('click', function() {
 	// Тут вставляешь название блока куда скролить
-	smoothScroll('.block2-target', 1000);
+	smoothScroll('.aboutus-target', 1000);
 });
 
-block3Anchor.addEventListener('click', function() {
+projectsAnchor.addEventListener('click', function() {
 	// Тут вставляешь название блока куда скролить
-	smoothScroll('.block3-target', 1000);
+	smoothScroll('.projects-target', 1000);
 });
 
-block4Anchor.addEventListener('click', function() {
+reviewsAnchor.addEventListener('click', function() {
 	// Тут вставляешь название блока куда скролить
-	smoothScroll('.block4-target', 1000);
+	smoothScroll('.reviews-target', 1000);
 });
 
-block5Anchor.addEventListener('click', function() {
+stepsAnchor.addEventListener('click', function() {
 	// Тут вставляешь название блока куда скролить
-	smoothScroll('.block5-target', 1000);
+	smoothScroll('.steps-target', 1000);
 });
 
-block6Anchor.addEventListener('click', function() {
+contactsAnchor.addEventListener('click', function() {
 	// Тут вставляешь название блока куда скролить
-	smoothScroll('.block6-target', 1000);
+	smoothScroll('.contacts-target', 1000);
 });
 
 

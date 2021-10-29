@@ -34,6 +34,10 @@
 			top: 1px;
 			font-size: 1.4rem;
 		}
+		
+		@include bp-380 {
+			display: none;
+		}
 	}
 }
 

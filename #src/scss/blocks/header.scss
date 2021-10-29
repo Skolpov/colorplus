@@ -109,6 +109,7 @@
 
 /*Контакты*/
 
+
 .contacts {
 	display: flex; 
 	flex-direction: row;
@@ -126,6 +127,9 @@
 .address, .clock, .mail, .phone,.whatsapp {
 	margin-left: 1.5rem;
 	margin-right: 1.5rem;
+
+
+
 }
 
 .whatsapp {
@@ -180,15 +184,12 @@
 		}
 	}
 
-	.phone__block {
-		.phone-number {
-			&:hover {
-				color: $second-color;
-			}
-		}
+	@include bp-480 {
+		margin-left: 0;
 	}
 
 }
+
 
 /*-----------*/
 

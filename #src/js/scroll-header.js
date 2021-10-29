@@ -10,7 +10,7 @@ const sticky = header.offsetTop;
 function myFunction() {
 	if (window.pageYOffset > sticky) {
 		header.classList.add("header--fixed");
-		headerWrap.style.paddingTop="75px";
+		headerWrap.style.paddingTop="84px";
 	} else {
 		header.classList.remove("header--fixed");
 		headerWrap.style.paddingTop="0px";

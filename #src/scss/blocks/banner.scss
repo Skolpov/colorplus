@@ -52,6 +52,10 @@
 .banner__main-title {
 	margin-bottom: 4rem;
 
+	@include bp-480 {
+		margin-bottom: 2rem;
+	}
+
 	h1 {
 		color: $white;
 
@@ -70,6 +74,15 @@
 	flex-direction: row;
 	align-items: center;
 	margin-bottom: 4rem;
+
+	@include bp-640 {
+		flex-direction: column;
+	}
+
+	@include bp-480 {
+		margin-bottom: 3rem;
+	}
+
 }
 
 .banner__quote {
@@ -79,6 +92,13 @@
 	margin-right: 2rem;
 	flex: 1 1 52rem;
 	max-width: 52rem;
+
+	@include bp-640 {
+		flex-basis: auto;
+		max-width: auto;
+		margin-right: 0;
+		margin-bottom: 3rem;
+	}
 
 	.icon-quote {
 		width: 2.3rem;
@@ -107,6 +127,13 @@
 			text-align: center;
 		}
 
+	}
+}
+
+.banner__info-shield {
+
+	@include bp-640 {
+		width: 14rem;
 	}
 }
 
@@ -150,6 +177,11 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position-y: 0;
+
+		@include bp-640 {
+			max-width: 10rem;
+			height: 10rem;
+		}
 	}
 
 	.home-pic {
@@ -200,6 +232,10 @@
 	padding: 15px;
 	border-radius: 1rem;
 	background-color: rgba(255, 255, 255, 0.4); 
+
+	@include bp-480 {
+		padding: 0;
+	}
 	
 	.tag-sale {
 		position: relative;
@@ -218,6 +254,10 @@
 	background-color: $white;
 	padding: 4rem 3rem;
 	border-radius: 1rem;
+
+	@include bp-380 {
+		padding: 2rem 2rem;
+	}
 }
 
 .banner__form-title {
@@ -236,9 +276,18 @@
 
 	p, span {
 		@include title-font;
-		font-weight: 800;
 		font-size: 1.8rem;
+		font-weight: 800;
 		text-align: center;
+
+		@include bp-992 {
+			font-size: 2.2rem;
+		}
+
+		@include bp-380 {
+			font-size: 1.6rem;
+		}
+
 	}
 
 	p {

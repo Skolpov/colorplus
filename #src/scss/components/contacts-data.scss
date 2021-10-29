@@ -54,20 +54,19 @@
 			font-weight: 700;
 			color: $white;
 			display: block;
-
 			&:hover {
-				color: $link;
-				border: none !important;
+				color: $second-color;
 			}
-			
+
 		}
 
 		.header__call-form-btn {
 			display: block;
 			color: $second-color;
+			&:hover {
+				color: lighten($second-color, 25%);
+			}
 		}
-	
-
 
 	}
 
