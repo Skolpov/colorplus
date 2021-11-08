@@ -2,18 +2,398 @@
 
 /*Основа*/
 
-
+.steps__row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	
+	@include bp-1200 {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
 
 /*-----------*/
 
 
 
 
-/*Блок*/
+/*Заголовок*/
 
+.steps__title {
+	max-width: 330px;
+	h2 {
+		span {
+			font-weight: 100;
+		}
+	}
 
+	@include bp-1200 {
+		max-width: 100%;
+		text-align: center;
+		margin-bottom: 5rem;
+	}
+
+	@include bp-480 {
+		margin-bottom: 3rem;
+	}
+
+}
+
+.steps__pic {
+	position: relative;
+	.step__pic-box {
+		position: absolute;
+		top: -8rem;
+		left: 2rem;
+		width: 52rem;
+		height: 52rem;
+		background: url('../img/pictures/steps-pic/house-1x.png');
+		@include bg-x2('../img/pictures/steps-pic/house-2x.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	@include bp-1200 {
+		display: none;
+	}
+
+}
 
 /*----------*/
+
+
+
+
+/*Шаги*/
+
+.steps__items {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 1fr 3rem 1fr 3rem 1fr;
+	-ms-grid-rows: 1fr 3rem 1fr;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr 1fr;
+	gap: 3rem;
+
+	@include bp-992 {
+		-ms-grid-columns: 1fr 2rem 1fr;
+		-ms-grid-row: 1fr 2rem 1fr 2rem 1fr;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		gap: 2rem;
+	}
+
+}
+
+.step__item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 24.7rem;
+	height: 24.7rem;
+	border-radius: 50%;
+	border: 2px solid #F6F9DB;
+
+	@include bp-640 {
+		border: none;
+		width: 19rem;
+		height: 19rem;
+	}
+
+	@include bp-480 {
+		width: auto;
+		height: auto;
+	}
+	
+}
+
+.step1 {
+	-ms-grid-column: 1;
+	-ms-grid-row: 1;
+}
+
+.step2 {
+	-ms-grid-column: 3;
+	-ms-grid-row: 1;
+}
+
+.step3 {
+	-ms-grid-column: 5;
+	-ms-grid-row: 1;
+}
+
+.step4 {
+	-ms-grid-column: 1;
+	-ms-grid-row: 2;
+}
+
+.step5 {
+	-ms-grid-column: 3;
+	-ms-grid-row: 2;
+}
+
+.step6 {
+	-ms-grid-column: 5;
+	-ms-grid-row: 2;
+}
+
+.step-circle2 {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 21.7rem;
+	height: 21.7rem;
+	border-radius: 50%;
+	border: 2px solid #F6F9DB;
+
+	@include bp-640 {
+		border: none;
+		width: auto;
+		height: auto;
+	}
+
+	.step-btn {
+		position: absolute;
+		left: 3.5rem;
+		bottom: 0;
+		width: 5rem;
+		height: 5rem;
+		z-index: 3;
+
+		@include bp-480 {
+			width: 3.5rem;
+			height: 3.5rem;
+			left: 2rem;
+		}
+
+		.step-btn-box {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			width: 5rem;
+			height: 5rem;
+			background: linear-gradient(218.39deg, rgba(201, 238, 50, 0.73) 16.65%, rgba(201, 238, 50, 0) 86.58%), #8FB101;
+			box-shadow: 0px 7px 18px rgba(152, 182, 29, 0.79);
+			cursor: pointer;
+
+			@include bp-480 {
+				width: 3.5rem;
+				height: 3.5rem;	
+			}
+
+			span {
+				font-size: 5rem;
+				color: $white;
+				@include bp-480 {
+					font-size: 3rem;
+				}
+			}
+
+			&:hover {
+				background: #B2D61E;
+			}
+
+		}
+
+	}
+}
+
+.step-text {
+	display: none;
+	position: absolute;
+	left: 0;
+	bottom: 7rem;
+	z-index: 1;
+	width: 30rem;
+	padding: 2rem;
+	border-radius: 1.5rem;
+	background-color: $white;
+	box-shadow: 0px 6px 44px rgba(0, 0, 0, 0.09);
+
+	p {
+		font-size: 1.4rem;
+	}
+}
+
+.step--active {
+	display: flex;
+}
+
+.step-circle3 {
+	display: flex;
+	align-self: center;
+	justify-content: center;
+	width: 19rem;
+	height: 19rem;
+	border-radius: 50%;
+	background-color: #F6F9DB;
+	overflow: hidden;
+
+	@include bp-480 {
+		width: 13rem;
+		height: 13rem;
+	}
+}
+
+.info-block {
+	position: relative;
+	padding-top: 4rem;
+	padding-left: 3rem;
+	width: 14rem;
+
+	@include bp-480 {
+		padding-top: 2rem;
+	}
+
+
+	.info-box {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+
+	}
+
+	.step-title {
+		p {
+			@include title-font;
+			font-size: 1.7rem;
+			font-weight: 800;
+			@include bp-480 {
+				font-size: 1.3rem;
+			}
+		}
+		margin-bottom: 0.6rem;
+	}
+
+	.step-number {
+		span {
+			@include title-font;
+			@include adaptiv-font(34,24);
+			font-weight: 800;
+			color: #E6EAC5;
+		}
+	}
+
+
+}
+
+.step-pic1 {
+	.pic-box {
+		background: url('../img/pictures/steps/step1-1x.png');
+		@include bg-x2('../img/pictures/steps/step1-2x.png');
+	}
+}
+
+.step-pic2 {
+	.pic-box {
+		background: url('../img/pictures/steps/step2-1x.png');
+		@include bg-x2('../img/pictures/steps/step2-2x.png');
+		background-position-x: 1rem;
+	}
+}
+
+.step-pic3 {
+	.pic-box {
+		background: url('../img/pictures/steps/step3-1x.png');
+		@include bg-x2('../img/pictures/steps/step3-2x.png');
+		background-position-x: -1rem;
+	}
+}
+
+.step-pic4 {
+	.pic-box {
+		background: url('../img/pictures/steps/step4-1x.png');
+		@include bg-x2('../img/pictures/steps/step4-2x.png');
+		background-position-y: -2rem;
+
+	}
+}
+
+.step-pic5 {
+	.pic-box {
+		background: url('../img/pictures/steps/step5-1x.png');
+		@include bg-x2('../img/pictures/steps/step5-2x.png');
+	}
+}
+
+.step-pic6 {
+	.pic-box {
+		background: url('../img/pictures/steps/step6-1x.png');
+		@include bg-x2('../img/pictures/steps/step6-2x.png');
+	}
+}
+
+.step-pic {
+	position: relative;
+	width: 5rem;
+	height: 12rem;
+	align-self: flex-end;
+
+	@include bp-480 {
+		width: 4rem;
+		height: 8rem;
+	}
+
+	.pic-box {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 9rem;
+		height: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+
+		@include bp-480 {
+			width: 5rem;
+		}
+	}
+}
+
+.final-step {
+
+	border-color: #e0f393;
+
+	.step-circle2 {
+		border-color: #CBDC86;
+	}
+
+	.step-circle3 {
+		background-color: #95B806;
+
+		.info-block {
+			padding-top: 3rem;
+			@include bp-480 {
+				padding-top: 2rem;
+			}
+			.step-title {
+				margin-bottom: 0;
+				p {
+					font-size: 2.4rem;
+					color: $white;
+					@include bp-480 {
+						font-size: 1.4rem;
+					}
+				}
+			}
+			.step-number {
+				color: #BCE123;
+			}
+		}
+	}
+}
+
+/*----------*/
+
+
+
+
 
 
 // КОНЕЦ БЛОКА ==========

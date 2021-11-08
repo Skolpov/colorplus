@@ -2,6 +2,32 @@
 
 /*Основа*/
 
+.contacts-target {
+	background-image: url('../img/pictures/backgrounds/footer-bg-1x.jpg');
+	@include bg-x2 ('../img/pictures/backgrounds/footer-bg-2x.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+
+.footer-paddTB {
+	padding-top: 14rem;
+	padding-bottom: 9rem;
+	@include bp-768 {
+		padding-top: 8rem;
+		padding-bottom: 8rem;
+	}
+	@include bp-480 {
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+	}
+}
+
+.contacts__row {
+	@include bp-1200 {
+		justify-content: center;
+	}
+}
 
 
 /*-----------*/
@@ -9,11 +35,257 @@
 
 
 
-/*Блок*/
+/*Заголовок*/
+
+.contacts__title {
+
+	@include bp-992 {
+		text-align: center;
+	}
+
+	h2 {
+		max-width: 85rem;
+		@include adaptiv-font(44,24);
+		color: $white;
+		margin-bottom: 2.5rem;
+		@include bp-992 {
+			max-width: 100%;
+		}
+	}
+
+	p {
+		@include adaptiv-font(18,14);
+		color: $white;
+		margin-bottom: 4rem;
+		max-width: 56rem;
+		@include bp-992 {
+			max-width: 100%;
+		}
+		span {
+			color: $second-color;
+		}
+	}
+}
+
+/*----------*/
+
+
+
+
+/*Форма*/
+
+.footer__form-and-contacts {
+	display: flex;
+	flex-direction: row;
+	@include bp-1200 {
+		flex-direction: column;
+	}
+}
+
+.footer__form-wrapper {
+	position: relative;
+	margin-right: 1.5rem;
+	@include bp-1200 {
+		margin-right: 0;
+		margin-bottom: 1rem;
+	}
+}
+
+.footer__form-container {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	position: relative;
+	border-radius: 1.5rem;
+	padding: 3.5rem 4rem;
+	background-color: $white;
+	@include bp-768 {
+		padding: 4rem 3rem;
+	}
+	@include bp-380 {
+		padding: 2rem;
+	}
+
+}
+
+.footer__form-title {
+	margin-bottom: 2rem;
+	p {
+		font-size: 1.8rem;
+		font-weight: 700;
+		@include bp-480 {
+			font-size: 1.4rem;
+		}
+	}
+}
+
+.footer-form {
+	flex-direction: column;
+	.inputs-box {
+		display: flex;
+		flex-direction: row;
+		align-content: center;
+		@include bp-768 {
+			flex-direction: column;
+			width: 100%;
+		}
+
+		.footer-btn {
+			height: 5.7rem;
+		}
+	}
+
+	.footer-checkbox {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		.footer-label {
+			&::before {
+				top: 0;
+				@include bp-480 {
+					top: 0.8rem;
+				}
+			}
+		}
+		.politics-box {
+			padding-left:  1rem;
+			@include bp-480 {
+				padding-left: 3rem;
+			}
+		}
+		@include bp-480 {
+			flex-direction: column;
+		}
+	}
+
+}
+
+.tag-sale__contacts {
+	position: absolute;
+	top: -7rem;
+	right: 2rem;
+	justify-content: flex-end;
+
+	@include bp-992 {
+		position: relative;
+		justify-content: center;
+		top: 0;
+		height: 7rem;
+		right: 0;
+	}
+
+	.tag-sale-box {
+
+		p {
+			top: 2rem;	
+		}
+		
+		img {
+			transform: rotate(360deg);
+		}
+	}
+}
 
 
 
 /*----------*/
+
+
+
+
+/*Контакты*/
+
+.footer__contacts {
+	display: flex;
+	flex-direction: column;
+	padding: 2.5rem 4rem;
+	border-radius: 1.5rem;
+	background-color: rgba(0, 0, 0, 0.6);
+
+	@include bp-1200 {
+		align-items: center;
+	}
+
+	@include bp-480 {
+		padding: 2rem;
+	}
+
+	.footer-contacts-title {
+		margin-bottom: 1rem;
+		p {
+			@include title-font;
+			font-size: 1.6rem;
+			color: $white;
+			font-weight: 800;
+		}
+	}
+
+	.contacts-box {
+		display: flex;
+		flex-direction: column;
+		.address, .mail, .phone {
+			margin-left: 0;
+			margin-top: 0.3rem;
+			margin-bottom: 0.3rem;
+
+			@include bp-480 {
+				margin-top: 0.6rem;
+				margin-bottom: 0.6rem;
+			}
+			.contacts-ic {
+				color: $main-color;
+			}
+			a, p {
+				color: $white;
+			}
+		}
+		.phone-footer {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-content: center;
+
+			@include bp-480 {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+
+			.phone-foot-box {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				font-size: 2rem;
+				font-weight: 700;
+				margin-right: 1rem;
+
+				@include bp-480 {
+					margin-right: 0;
+					margin-bottom: 1rem;
+
+				}
+
+				.phone__block {
+					a {
+						white-space: nowrap;
+					}
+				}
+			}
+
+			.social {
+				display: flex;
+				flex-direction: row;
+				align-content: center;
+				a {
+					margin: 0.2rem;
+				}
+			}
+		}
+
+	}
+}
+
+/*----------*/
+
 
 
 // КОНЕЦ БЛОКА ==========

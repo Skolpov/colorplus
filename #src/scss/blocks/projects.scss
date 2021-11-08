@@ -3,6 +3,70 @@
 
 /*Основа*/
 
+.projects-container {
+	position: relative;
+	max-width: 159rem;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.projects-container-cards {
+	position: relative;
+	max-width: 186rem;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+@media (max-width:1360px) {
+	.projects-container {
+		max-width: 1170px;
+	}
+}
+
+@media (max-width:1170px) {
+	.projects-container {
+		max-width: 970px;
+	}
+}
+
+@media (max-width:992px) {
+	.projects-container {
+		max-width: 750px;
+	}
+}
+
+@media (max-width:767px) {
+	.projects-container {
+		max-width: none;
+	}
+}
+
+@media (max-width:540px) {
+	.projects-container {
+		max-width: none;
+	}
+}
+
+.projects-target {
+	background-color: #F6F6F6;
+	border-radius: 7rem;
+	@include bp-480 {
+		border-radius: 3rem;
+	}
+}
+
+.projects__row {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+
+	@include bp-480 {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+}
+
 
 
 /*-----------*/
@@ -10,11 +74,405 @@
 
 
 
-/*Блок*/
+/*Заголовок и меню*/
 
+.projects__title-menu {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	@include bp-1600 {
+		flex-direction: column;
+	}
+}
 
+.project__title {
+	@include bp-1600 {
+		margin-bottom: 4rem;
+		text-align: center;
+	}
+	h2 {
+		font-weight: 300;
+		span {
+			font-weight: 700;
+			color: #DBDBDB;
+			@include bp-480 {
+				display: none;
+			}
+		}
+	}
+
+	a {
+		@include adaptiv-font(32, 24);
+		border-bottom: 1px dotted $link;
+		
+		&:hover {
+			cursor: pointer;
+			color: $orange;
+			border-bottom: 0;
+		}
+	}
+}
+
+.projects__menu {
+
+	@include bp-992 {
+		display: none;
+	}
+	a {
+		display: inline-block;
+		margin-left: 1.5rem;
+		margin-right: 1.5rem;
+		@include adaptiv-font(18,16);
+		border-bottom: 1px dotted $link;
+		&:hover {
+			color: $orange;
+			border-bottom: 0;
+		}
+	}
+}
+
+.project__menu-adaptive {
+	display: none;
+
+	@include bp-992 {
+		display: flex;
+		width: 51rem;
+	}
+
+	@include bp-640 {
+		width: 41rem;
+	}
+
+	@include bp-480 {
+		width: 27rem;
+	}
+
+	.select-group {
+		position: relative;
+		width: 100%;
+		
+		.button {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			padding: 1.5rem;
+			width: 100%;
+			height: 5rem;
+			background: white;
+			border: 1px solid $grey-light4;
+			border-radius: 0.4rem;
+
+			&:after {
+				display: none !important;
+			}
+
+			&:hover {
+				&:after {
+					display: none !important;
+				}
+			}
+		
+			.arr {
+				position: absolute;
+				top: 1.7rem;
+				right: 1.5rem;
+				border: 1px solid $main-color;
+				border-width: 0 0.2rem 0.2rem 0;
+				padding: 0.4rem;
+				transform: rotate(45deg);
+			}
+		
+		}
+
+		.dropdown {
+			position: absolute;
+			display: block;
+			top: 6rem;
+			z-index: 5;
+			border: 1px solid $grey-light4;
+			width: 100%;
+			border-radius: 0.4rem;
+			.option {
+				display: none;
+			}
+		
+			.select-item {
+				display: block;
+				background-color: white;
+				padding: 1.5rem 0.5rem 1.5rem 1.5rem;
+				transition: all 0.3 ease-in-out;
+				&:hover {
+					cursor: pointer;
+					background-color: lighten($main-color, 55%);
+					color: $main-color;
+				}
+			}
+		}
+	}
+}
 
 /*----------*/
+
+
+
+
+/*Карточки*/
+
+.projects__block {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-bottom: 1rem;
+}
+
+.project__card {
+	overflow: hidden;
+	flex: 1 1 44rem;
+	max-width: 44rem;
+	border-radius: 1.5rem;
+	margin: 0.5rem;
+	background-color: #fff;
+	cursor: pointer;
+	transition: box-shadow 0.6s ease-in-out;
+
+	@include bp-992 {
+		flex-basis: 20rem;
+		max-width: 20rem;
+	}
+
+	@include bp-480 {
+		flex-basis: 13rem;
+		max-width: 13rem;
+		margin: 0.2rem;
+		border-radius: 1rem;
+	}
+
+	&:hover {
+		box-shadow: 0 0 1rem rgb(223, 213, 196);
+
+		.project__info {
+			.project__main-title {
+				p {
+					color: $orange;
+				}
+			}
+		}
+
+		.project__price-and-btn {
+			.btn {
+				button {
+					background-color: $orange;
+					color: $white;
+				}
+			}
+		}
+	}
+}
+
+.project__pic {
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.project__main-title {
+	padding: 3rem 3rem 1rem 3rem;
+	transition: color 0.3s ease-in-out;
+
+	@include bp-992 {
+		padding: 1.5rem;
+	}
+
+	@include bp-480 {
+		padding: 1rem;
+	}
+
+	p {
+		@include title-font;
+		font-size: 1.8rem;
+		font-weight: 800;
+		@include bp-992 {
+			font-size: 1.3rem;
+		}
+	}
+}
+
+.project__features {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: center;
+	padding: 1rem 3rem 2rem 3rem;
+
+	@include bp-992 {
+		padding: 0;
+	}
+
+	@include bp-480 {
+		flex-direction: column;
+	}
+
+	& div:last-child {
+		border: none;
+	}
+
+}
+
+.feature__item {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0rem 1.5rem;
+	border-right: 1px solid #e2e6d4;
+
+	@include bp-992 {
+			padding-left: 1rem;
+			padding-right: 1rem;
+
+		p,span {
+			font-size: 1.3rem;
+		}
+
+	}
+
+	@include bp-480 {
+		padding: 0.3rem 1rem;
+	}
+
+	.feature-ic {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 2rem;
+		height: 2rem;
+		margin-right: 1rem;
+		@include bp-992 {
+			display: none;
+		}
+	}
+
+	.feature-name {
+		@include bp-480 {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			width: 100%;
+		}
+	}
+
+}
+
+.project__price-and-btn {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+	@include bp-992 {
+		flex-direction: column;
+	}
+
+	.price {
+		padding: 2rem 2rem 2rem 3rem;
+
+		p {
+			@include title-font;
+			font-size: 2.2rem;
+			font-weight: 800;
+		}
+
+		@include bp-992 {
+			padding: 1.5rem;
+			p {
+				font-size: 1.3rem;
+			}
+		}
+	}
+
+	.btn {
+
+		@include bp-992 {
+		}
+
+		button {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			padding: 2.5rem;
+			border: 1px solid #F5D1B9;
+			border-right: none;
+			border-bottom: none;
+			border-top-left-radius: 5rem;
+			font-size: 1.8rem;
+			text-transform: uppercase;
+			color: $orange;
+			background-color: $white;
+			transition: background-color 0.3s ease-in-out;
+
+			@include bp-992 {
+				border-right: 1px solid #F5D1B9;
+				border-top-left-radius: 2rem;
+				border-top-right-radius: 2rem;
+				padding: 1.2rem 2rem;
+				font-size: 1.4rem;
+				width: 100%;
+			}
+
+			@include bp-480 {
+				font-size: 1.2rem;
+				padding: 1rem 1.5rem;
+			}
+
+			.icon-arrow-tail-thin {
+				display: none;
+				&:before {
+					margin-left: 1.4rem;
+					font-size: 1.6rem;
+				}
+			}
+
+		}
+	}
+
+}
+
+/*----------*/
+
+
+
+
+/*Кнопка больше*/
+
+.projects__btn-more {
+	padding-bottom: 8rem;
+	display: flex;
+	justify-content: center;
+	a {
+		display: block;
+		text-align: center;
+		@include adaptiv-font(18,14);
+		color: $text;
+		padding: 2.5rem 12rem;
+		border-radius: 1rem;
+		background-color: #fff;
+		&:hover {
+			background-color: #fff0dd;
+			color: $orange;
+		}
+		@include bp-480 {
+			padding: 1.5rem 2rem;
+			width: 27rem;
+		}
+	}
+}
+
+/*----------*/
+
 
 
 // КОНЕЦ БЛОКА ==========

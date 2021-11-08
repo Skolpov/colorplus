@@ -129,12 +129,19 @@
 	.input-box {
 		margin: 0.5rem;
 		width: 100%;
+		@include bp-768 {
+			margin-left: 0;
+			margin-right: 0;
+		}
 	}
 	
 	.form-btn {
 		margin: 0.5rem;
 		width: 100%;
-
+		@include bp-768 {
+			margin-left: 0;
+			margin-right: 0;
+		}
 	}
 
 	.checkbox {

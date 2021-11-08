@@ -100,6 +100,7 @@ const popups = () => {
 
 	bindModal('.header__call-form-btn', '.popup-callback', '.popup-close');
 	bindModal('.burger__call-btn', '.popup-callback', '.popup-close');
+	bindModal('.order-btn-project', '.popup-callback', '.popup-close');
 	bindModal('.btn-signup', '.popup-callback', '.popup-close');
 	bindModal('.btn-card', '.popup-content', '.popup-close');
 

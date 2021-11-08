@@ -131,6 +131,12 @@ $maxWidth: 1280;
 
 // ADAPTIVE
 
+@mixin bp-1600 {
+	@media only screen and (max-width: 1600px) {
+		@content;
+	}
+}
+
 @mixin bp-1400 {
 	@media only screen and (max-width: 1400px) {
 		@content;
