@@ -69,6 +69,7 @@
 	}
 }
 
+
 .banner__quote-shield {
 	display: flex;
 	flex-direction: row;
@@ -156,7 +157,7 @@
 	border-radius: 1.5rem;
 	background-color: $main-color;
 	margin: 0.5rem;
-	
+	transition: all 0.3s ease-in-out;
 	p {
 		position: absolute;
 		padding-top: 1.5rem;
@@ -209,6 +210,12 @@
 		@include bg-x2 ('../img/pictures/banner-cards/kids-2x.png');
 	}
 
+	&:hover {
+		cursor: pointer;
+		background-color: #67791B;
+		box-shadow: 0 7px 18px rgba(152, 182, 29, 0.5);
+	}
+
 }
 
 /*-----------*/
@@ -232,7 +239,7 @@
 	padding: 15px;
 	border-radius: 1rem;
 	background-color: rgba(255, 255, 255, 0.4); 
-
+	box-shadow: 0 6px 44px rgba(0, 0, 0, 0.2);
 	@include bp-480 {
 		padding: 0;
 	}
@@ -283,7 +290,7 @@
 	background-color: $white;
 	padding: 4rem 3rem;
 	border-radius: 1rem;
-
+	box-shadow: 0 6px 44px rgba(0, 0, 0, 0.2);
 	@include bp-380 {
 		padding: 2rem 2rem;
 	}

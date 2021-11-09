@@ -13,7 +13,6 @@ window.addEventListener('DOMContentLoaded', () => {
 @@include('anchors.js')
 @@include('animations.js')
 @@include('slider.js')
-@@include('steps.js')
 
 
 

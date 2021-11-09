@@ -69,3 +69,55 @@ contactsAnchor.addEventListener('click', function() {
 
 
 // // ==========
+
+
+
+
+// Это кнопки меню в шапке
+
+const bannerBtn = document.querySelector('.banner-btn');
+const aboutusBtn = document.querySelector('.aboutus-btn');
+const projectsBtn = document.querySelector('.projects-btn');
+const reviewsBtn = document.querySelector('.reviews-btn');
+const stepsBtn = document.querySelector('.steps-btn');
+const contactsBtn = document.querySelector('.contacts-btn');
+
+
+bannerBtn.addEventListener('click', function() {
+	smoothScroll('.banner-target', 1000);
+});
+aboutusBtn.addEventListener('click', function() {
+	smoothScroll('.aboutus-target', 1000);
+});
+projectsBtn.addEventListener('click', function() {
+	smoothScroll('.projects-target', 1000);
+});
+reviewsBtn.addEventListener('click', function() {
+	smoothScroll('.reviews-target', 1000);
+});
+stepsBtn.addEventListener('click', function() {
+	smoothScroll('.steps-target', 1000);
+});
+contactsBtn.addEventListener('click', function() {
+	smoothScroll('.contacts-target', 1000);
+});
+
+// // ==========
+
+
+
+
+// 5 карточек в баннере скролят к блоку проектов.
+
+const buildingTypesBtns = Array.prototype.slice.call(document.querySelectorAll('.building-type'));
+
+
+buildingTypesBtns.forEach(function(card) {
+	card.addEventListener('click', function() {
+		smoothScroll('.projects-target', 1000);
+	});
+})
+
+
+
+// // ==========

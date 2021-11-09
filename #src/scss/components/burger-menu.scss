@@ -115,7 +115,7 @@
 		padding-left: 0;
 	}
 
-	.phone,.mail,.address {
+	.phone,.mail {
 		margin-left: 0;
 		margin-right: 0;
 		padding-top: 0.5rem;
@@ -145,15 +145,6 @@
 		a {
 			font-size: 1.6rem;
 			color: $white;
-		}
-	}
-
-	.address {
-		p {
-			color: #adbb96;
-		}
-		@include bp-480 {
-			text-align: center;
 		}
 	}
 

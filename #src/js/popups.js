@@ -102,7 +102,7 @@ const popups = () => {
 	bindModal('.burger__call-btn', '.popup-callback', '.popup-close');
 	bindModal('.order-btn-project', '.popup-callback', '.popup-close');
 	bindModal('.btn-signup', '.popup-callback', '.popup-close');
-	bindModal('.btn-card', '.popup-content', '.popup-close');
+	// bindModal('.project__btn-open', '.popup-content__project', '.popup-close');
 
 };
 

@@ -6,6 +6,10 @@ const bannerForm = document.querySelector('#form2');
 const inputName2 = document.querySelector('#input-name2');
 const inputPhone2 = document.querySelector('#input-phone2');
 
+const footerForm = document.querySelector('#form3');
+const inputName3 = document.querySelector('#input-name3');
+const inputPhone3 = document.querySelector('#input-phone3');
+
 
 // const secondForm = document.querySelector('#form2');
 // const inputName2 = document.querySelector('#input-name2');
@@ -126,6 +130,18 @@ bannerForm.addEventListener('submit', function(e) {
 	checkRequired([inputName2, inputPhone2]);
 	checkLength(inputName2, 2, 20);
 	checkLength(inputPhone2, 16, 20);
+	
+	// checkEmail(inputMail);
+	// checkPasswordsMatch(inputPassword1, inputPassword2);
+
+});
+
+footerForm.addEventListener('submit', function(e) {
+	e.preventDefault();
+
+	checkRequired([inputName3, inputPhone3]);
+	checkLength(inputName3, 2, 20);
+	checkLength(inputPhone3, 16, 20);
 	
 	// checkEmail(inputMail);
 	// checkPasswordsMatch(inputPassword1, inputPassword2);

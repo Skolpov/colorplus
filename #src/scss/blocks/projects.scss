@@ -139,6 +139,7 @@
 	@include bp-992 {
 		display: flex;
 		width: 51rem;
+		margin-bottom: 1rem;
 	}
 
 	@include bp-640 {
@@ -279,17 +280,18 @@
 	}
 }
 
-.project__main-title {
-	padding: 3rem 3rem 1rem 3rem;
-	transition: color 0.3s ease-in-out;
-
+.project__info {
+	padding: 3rem;
+	
 	@include bp-992 {
 		padding: 1.5rem;
 	}
 
-	@include bp-480 {
-		padding: 1rem;
-	}
+}
+
+.project__main-title {
+	transition: color 0.3s ease-in-out;
+	margin-bottom: 2rem;
 
 	p {
 		@include title-font;
@@ -306,10 +308,14 @@
 	flex-direction: row;
 	align-items: stretch;
 	justify-content: center;
-	padding: 1rem 3rem 2rem 3rem;
 
 	@include bp-992 {
-		padding: 0;
+		& div:first-child {
+			padding-left: 0;
+		}
+		& div:last-child {
+			padding-right: 0;
+		}
 	}
 
 	@include bp-480 {
@@ -330,8 +336,8 @@
 	border-right: 1px solid #e2e6d4;
 
 	@include bp-992 {
-			padding-left: 1rem;
-			padding-right: 1rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
 
 		p,span {
 			font-size: 1.3rem;
@@ -340,7 +346,8 @@
 	}
 
 	@include bp-480 {
-		padding: 0.3rem 1rem;
+		padding: 0.3rem 0;
+		border: none;
 	}
 
 	.feature-ic {
@@ -386,7 +393,8 @@
 		}
 
 		@include bp-992 {
-			padding: 1.5rem;
+			padding: 0 1.5rem 1.5rem 1.5rem;
+			
 			p {
 				font-size: 1.3rem;
 			}

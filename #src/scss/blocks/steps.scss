@@ -157,7 +157,8 @@
 
 	.step-btn {
 		position: absolute;
-		left: 3.5rem;
+		left: 50%;
+		transform: translateX(-50%);
 		bottom: 0;
 		width: 5rem;
 		height: 5rem;
@@ -166,7 +167,7 @@
 		@include bp-480 {
 			width: 3.5rem;
 			height: 3.5rem;
-			left: 2rem;
+			bottom: -1.5rem;
 		}
 
 		.step-btn-box {
@@ -200,27 +201,38 @@
 		}
 
 	}
-}
 
-.step-text {
-	display: none;
-	position: absolute;
-	left: 0;
-	bottom: 7rem;
-	z-index: 1;
-	width: 30rem;
-	padding: 2rem;
-	border-radius: 1.5rem;
-	background-color: $white;
-	box-shadow: 0px 6px 44px rgba(0, 0, 0, 0.09);
+	.step-btn .step-text {
+		display: none;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 7rem;
+		z-index: 1;
+		width: 30rem;
+		padding: 2rem;
+		border-radius: 1.5rem;
+		background-color: $white;
+		box-shadow: 0px 6px 44px rgba(0, 0, 0, 0.09);
 
-	p {
-		font-size: 1.4rem;
+		@include bp-640 {
+			width: 22rem;
+		}
+		@include bp-360 {
+			width: 17rem;
+		}
+	
+		p {
+			font-size: 1.4rem;
+			@include bp-480 {
+				font-size: 1.3rem;
+			}
+		}
 	}
-}
 
-.step--active {
-	display: flex;
+	.step-btn:hover .step-text {
+		display: flex;
+	}
 }
 
 .step-circle3 {
@@ -247,6 +259,7 @@
 
 	@include bp-480 {
 		padding-top: 2rem;
+		width: 15rem;
 	}
 
 

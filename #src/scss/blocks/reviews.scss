@@ -35,6 +35,9 @@
 	@include bp-1200 {
 		text-align: center;
 	}
+	@include bp-480 {
+		margin-bottom: 2rem;
+	}
 
 }
 
@@ -47,6 +50,7 @@
 
 .reviews__block {
 	background-color: transparent !important;
+	height: 100%;
 }
 
 .review__card {
@@ -93,11 +97,11 @@
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
-	margin-top: 3rem;
 	margin-bottom: 4rem;
 
 	@include bp-640 {
 		flex-direction: column-reverse;
+		margin-bottom: 3rem;
 	}
 
 	.client__name {
@@ -165,34 +169,71 @@
 	}
 	
 	.client__text {
+		position: relative;
+
 		p {
 			@include adaptiv-font(16, 14);
 			margin-bottom: 1rem;
 		}
 		span {
 			color: $link;
+			cursor: pointer;
 		}
 	}
 }
+
+.client__text .client-text-more {
+	display: none;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 7rem;
+	z-index: 1;
+	width: 30rem;
+	padding: 2rem;
+	border-radius: 1.5rem;
+	background-color: $white;
+	box-shadow: 0px 6px 44px rgba(0, 0, 0, 0.09);
+
+
+	@include bp-360 {
+		width: 26rem;
+	}
+}
+
+.review-btn-more:hover .client-text-more {
+	display: flex;
+}
+
 
 .client__project {
 	display: flex;
 	align-items: center;
 	border-radius: 1.5rem;
+	padding: 2rem;
 	background-color: #F5F8E9;
 
 	@include bp-640 {
 		flex-direction: column;
 	}
 
+	@include bp-480 {
+		padding: 2rem 1rem;
+	}
+
 	.project__desc {
 		max-width: 38rem;
 
 		.project__review-title {
-			padding: 3rem 3rem 1rem 3rem;
+			margin-bottom: 2rem;
+			margin-right: 2rem;
+			@include bp-640 {
+				margin-right: 0
+			}
 			p {
-				@include adaptiv-font(19,14);
-				font-weight: 500;
+				@include adaptiv-font(16,14);
+				@include title-font;
+				font-weight: 800;
 				text-align: left;
 				@include bp-640 {
 					text-align: center;
@@ -205,11 +246,10 @@
 			flex-direction: row;
 			align-items: stretch;
 			justify-content: flex-start;
-			padding: 1rem 3rem 2rem 3rem;
 
 			@include bp-640 {
-				padding: 1rem;
 				justify-content: center;
+				margin-bottom: 2rem;
 			}
 
 			& div:first-child {
@@ -230,9 +270,12 @@
 				padding: 0rem 1.5rem;
 				border-right: 1px solid #e2e6d4;
 
-				@include bp-320 {
+				@include bp-380 {
 					padding-left: 1rem;
 					padding-right: 1rem;
+					span, p {
+						font-size: 1.3rem;
+					}
 				}
 
 				.feature-ic {
@@ -253,7 +296,7 @@
 
 	.tags {
 		border-left: 1px solid #c6cab6;
-
+		
 		@include bp-640 {
 			display: flex;
 			flex-direction: row;
@@ -262,17 +305,27 @@
 
 		@include bp-480 {
 			flex-direction: column;
-			margin-bottom: 3rem;
+		}
+
+		@include bp-640 {
+			& img:first-child {
+				margin-right: 2rem;
+			}
+		}
+
+		@include bp-420 {
+			& img:first-child {
+				margin-right: 0;
+			}
 		}
 
 		img {
-			margin: 1.5rem 0.5rem 1.5rem 0;
-			@include bp-640 {
-				margin: 2rem;
-			}
+			margin-top: 0.5rem;
+			margin-bottom: 0.5rem;
+
 			@include bp-480 {
-				margin: 0.5rem;
 			}
+
 		}
 	}
 
@@ -300,7 +353,9 @@
 	border-radius: 1.5rem;
 	overflow: hidden;
 	margin: 1rem;
-
+	@include bp-480 {
+		border-radius: 0.5rem;
+	}
 	.main-image {
 		img {
 			width: 100%;
@@ -323,6 +378,10 @@
 	margin: 1rem;
 	border-radius: 1rem;
 	overflow: hidden;
+
+	@include bp-480 {
+		border-radius: 0.5rem;
+	}
 	img {
 		width: 100%;
 		height: auto;
